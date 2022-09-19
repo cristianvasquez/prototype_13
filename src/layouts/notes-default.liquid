@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include head %}
+    <link rel="stylesheet" href="/assets/style.css"/>
+</head>
+
+<body>
+<div>{{ content }}</div>
+{% include quadsIn %}
+{% include quadsOut %}
+{% comment %}{% include allnotes %}{% endcomment %}
+<footer>
+    <a href="/"> back </a>
+    <br/>
+    <small> '{{ site.title }}' was made with ❤ by '{{ site.author }}'</small>
+</footer>
+</body>
+
+</html>

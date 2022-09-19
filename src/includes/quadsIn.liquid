@@ -1,0 +1,8 @@
+{% if quadsIn.length > 0 %}
+    <p>Incoming quads</p>
+    <ul>
+        {% for quad in quadsIn %}
+            <li>{{ quad.subject }} {{ quad.predicate }} {{ quad.object }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
