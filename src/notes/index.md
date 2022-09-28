@@ -1,15 +1,16 @@
-# Markdown ++
+# Example
 
-This example is using the '**{{layout}}**' layout
+## Layout
 
-## Explicit links
+The layout for this note is
 
-* [Bob](./people/Bob)
+```json
+{
+  "layout": "note-layout",
+  "type": "note"
+}
+```
 
-## Mediawiki Links:
+There is two people
 
-- [[Alice]]
-
-## Plugin
-
-I had to add a plugin for this one. But was not that much coding.
+[[Alice]] and [[Bob]]

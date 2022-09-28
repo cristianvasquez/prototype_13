@@ -1,8 +1,21 @@
 {% if quadsIn.length > 0 %}
     <p>Incoming quads</p>
-    <ul>
+
+    <table>
+        <tr>
+            <th>s</th>
+            <th>p</th>
+            <th>o</th>
+            <th>g</th>
+        </tr>
         {% for quad in quadsIn %}
-            <li>{{ quad.subject }} {{ quad.predicate }} {{ quad.object }}</li>
+            <tr>
+                <th>{{ quad.subject }}</th>
+                <th>{{ quad.predicate }}</th>
+                <th>{{ quad.object }}</th>
+                <th>{{ quad.graph }}</th>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
+
 {% endif %}

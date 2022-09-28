@@ -1,8 +1,21 @@
 {% if quadsOut.length > 0 %}
     <p>Outgoing quads</p>
-    <ul>
+
+    <table>
+        <tr>
+            <th>s</th>
+            <th>p</th>
+            <th>o</th>
+            <th>g</th>
+        </tr>
         {% for quad in quadsOut %}
-            <li>{{ quad.subject }} {{ quad.predicate }} {{ quad.object }}</li>
+            <tr>
+                <th>{{ quad.subject }}</th>
+                <th>{{ quad.predicate }}</th>
+                <th>{{ quad.object }}</th>
+                <th>{{ quad.graph }}</th>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
+
 {% endif %}
