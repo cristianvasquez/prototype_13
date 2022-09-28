@@ -10,10 +10,10 @@
         </tr>
         {% for quad in quadsOut %}
             <tr>
-                <th>{{ quad.subject }}</th>
-                <th>{{ quad.predicate }}</th>
-                <th>{{ quad.object }}</th>
-                <th>{{ quad.graph }}</th>
+                <th>{{ quad.subject | shrink }}</th>
+                <th>{{ quad.predicate | shrink }}</th>
+                <th>{{ quad.object | shrink }}</th>
+                <th>{{ quad.graph | shrink }}</th>
             </tr>
         {% endfor %}
     </table>
