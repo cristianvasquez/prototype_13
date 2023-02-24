@@ -1,16 +1,9 @@
-# Example
+---
+attribute : value
+---
 
-## Layout
-
-The layout for this note is
-
-```json
-{
-  "layout": "note-layout",
-  "type": "note"
-}
-```
-
-There is two people
+There are two people
 
 [[Alice]] and [[Bob]]
+
+And (bob was friend ::  of alice)

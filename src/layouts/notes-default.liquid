@@ -7,6 +7,10 @@
 </head>
 
 <body>
+<!-- Send the URL of the iframe back to the parent window -->
+<script>
+    window.parent.postMessage({ type: 'iframeUrl', url: window.location.href }, '*');
+</script>
 <div>{{ content }}</div>
 {% include quadsIn %}
 {% include quadsOut %}
