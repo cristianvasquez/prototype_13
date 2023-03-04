@@ -4,16 +4,21 @@ module.exports = {
   eleventyComputed: {
     title: (data) => titleCase(data.title || data.page.fileSlug),
     quadsIn: (data) => {
-      const { dataset, context } = data.rdfData
-      const term = context.uriResolver.getUriFromName(data.page.fileSlug)
+      const { triplifier, dataset, context, triplifyOptions} = data.rdfData
+
+      const { path } = triplifier.termMapper.getPathByName(data.page.fileSlug) ?? {path:''}
+      const term = triplifier.termMapper.pathToUri(path, triplifyOptions)
+
       if (!term) {
         return []
       }
+
       return [...dataset].filter(quad => quad.object.equals(term))
     },
     quadsOut: (data) => {
-      const { dataset, context } = data.rdfData
-      const term = context.uriResolver.getUriFromName(data.page.fileSlug)
+      const { triplifier, dataset, context, triplifyOptions} = data.rdfData
+      const { path } = triplifier.termMapper.getPathByName(data.page.fileSlug) ?? {path:''}
+      const term = triplifier.termMapper.pathToUri(path, triplifyOptions)
       if (!term) {
         return []
       }

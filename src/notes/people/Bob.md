@@ -3,4 +3,4 @@
 is a :: [[Person]]
 knows :: [[Alice]]
 
-__THIS__ :: age :: 22
+[[Bob]] :: age :: 22
