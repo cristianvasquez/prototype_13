@@ -1,5 +1,5 @@
 ---
-layout: notes-default
+layout: show-quads
 ---
 # {{ title }}
 ---

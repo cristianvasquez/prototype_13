@@ -1,6 +1,6 @@
 {
-  "title": "Sample website",
-  "desc": "A demo",
-  "author": "Author",
+  "title": "El jardín",
+  "desc": "Mi jardin",
+  "author": "Cristian Vasquez",
   "baseurl": "http://localhost:8080"
 }
